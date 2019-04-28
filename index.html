@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- icon -->
+    <link rel="icon" href="icon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="custom.css">
+    <!-- Font Awesome CSS -->
+    <link href="font-awesome/css/all.css" rel="stylesheet">
+
+    <title>PaulDev</title>
+  </head>
+  <body class="responsive-margin">
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark border-bottom">
+        <button class="mb-2 navbar-toggler text-white btn-primary btn-block" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-white"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav nav-pills nav-fill w-100">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
+                        <i class="fas fa-home"></i> 
+                        <span class="mobile-display-none">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" id="pills-about-tab" data-toggle="pill" href="#pills-about" role="tab" aria-controls="pills-about" aria-selected="true">
+                        <i class="fas fa-file-contract"></i>
+                        <span class="mobile-display-none">About Me</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="true">
+                        <i class="fas fa-phone"></i>
+                        <span class="mobile-display-none">Contact Me</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="row mr-0 ml-0">
+            <div class="tab-content w-100" id="pills-tabContent">
+
+                <!-- HOME TAB -->
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="mt-5 text-center">
+                        <br/>
+                        <p>Hello</p> 
+                        <p>I am Paul Jason Cruz</p>
+                        <p>Web Developer</p>
+                        <p>Mobile Developer</p>
+                        <br/>
+                        <p>Welcome to my Porfolio</p>
+                        <a onclick="setContactUsActive()" class="text-white" id="home-contact-us" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="true">Contact Me</a>
+                    </div>
+                </div>
+
+                <!-- ABOUT ME TAB -->
+                <div class="tab-pane fade" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
+                    <div class="container mt-5">
+                        <h3><strong>About Me: </strong></h3>
+                        <p>
+                            Hi, I am Paul Jason M. Cruz. <br/>
+                            Graduated BSIT from PUP Main Campus. <br/>
+                            Currently working as a fullstack web and mobile developer. <br/>
+                            Now a days, Web developer can be a mobile developer because of <br/>
+                            single coded App where the javascript app can be converted to Android/iOS Apps.
+                        </p>
+                        <p>
+                            In Web Development:<br/>
+                            For the Backend API (REST), I experienced using PHP (Laravel and Phalcon). <br/>
+                            Today I am using GoLang as an API and also familiar with NodeJS and learning to add <br/>
+                            with Socket.io for progressive web apps.<br/>
+                            For the Databases, MySQL is what I mainly use but I work also with NoSQL (Firebase and DynamoDB). <br/>
+                            For the JavaScript FrontEnd Frameworks, Currently I am using AngularJS and I updated my <br/>
+                            knowledge to write in TypeScript with Angular2+ and VueJS with Quasar Framework<br/>
+                        </p>
+                        <p>
+                            In Mobile Development:<br/>
+                            I am currently cross-platform mobile development like Xamarin and experienced once the Ionic 1. <br/>
+                            But on my free time, I familiarize myself with Flutter and Native Android. <br/>
+                            Experienced publising for both Play Store and Appstore. <br/>
+                        </p>
+                        <p>
+                            As for myself, I am a hard worker and a team player. 
+                            Excited and willing to do work with new things 
+                            and learn more about other development tools or programming language. 
+                            If I were to choose between Web and Mobile Development, I would choose Web development
+                            because Web App also be converted to Mobile App <span>&#9786;</span>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CONTACT ME TAB -->
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="container mt-5">
+                        <h3><strong>Contact Me:  </strong></h3>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email address: </label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Details / Messages: </label>
+                            <textarea class="form-control" placeholder="Hello..." id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-block btn-dark">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="jquery.js"></script>
+    <script src="proper.js"></script>
+    <script src="bootstrap.js"></script>
+
+    <script>
+        // window.onload = function(){
+        //     $(".loading-page").fadeOut('slow');
+        // }
+
+        function setContactUsActive(){
+            document.getElementById('pills-home-tab').classList.remove('active');
+            document.getElementById('pills-skills-tab').classList.remove('active');
+            document.getElementById('pills-about-tab').classList.remove('active');
+            document.getElementById('pills-contact-tab').classList.add('active');
+        }
+    </script>
+  </body>
+</html>

@@ -10,41 +10,39 @@
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="custom.css">
+    <link rel="stylesheet" type="text/css" href="textEffect.css">
     <!-- Font Awesome CSS -->
     <link href="font-awesome/css/all.css" rel="stylesheet">
 
     <title>PaulDev</title>
+    <meta name="description" content="Paul Cruz initital portfolio using JQuery and Bootstrap 4">
   </head>
   <body class="responsive-margin">
+    <div class="loader">
+    </div>
 
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-dark border-bottom">
-        <button class="mb-2 navbar-toggler text-white btn-primary btn-block" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon text-white"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="nav nav-pills nav-fill w-100">
-                <li class="nav-item">
-                    <a class="nav-link active text-white" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
-                        <i class="fas fa-home"></i> 
-                        <span class="mobile-display-none">Home</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" id="pills-about-tab" data-toggle="pill" href="#pills-about" role="tab" aria-controls="pills-about" aria-selected="true">
-                        <i class="fas fa-file-contract"></i>
-                        <span class="mobile-display-none">About Me</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="true">
-                        <i class="fas fa-phone"></i>
-                        <span class="mobile-display-none">Contact Me</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <ul class="nav nav-pills nav-fill w-100">
+            <li class="nav-item">
+                <a class="nav-link active text-white" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
+                    <i class="fas fa-home"></i> 
+                    <span class="mobile-display-none">Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" id="pills-about-tab" data-toggle="pill" href="#pills-about" role="tab" aria-controls="pills-about" aria-selected="true">
+                    <i class="fas fa-file-contract"></i>
+                    <span class="mobile-display-none">About Me</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="true">
+                    <i class="fas fa-phone"></i>
+                    <span class="mobile-display-none">Contact Me</span>
+                </a>
+            </li>
+        </ul>
     </nav>
 
     <!-- Main Content -->
@@ -56,41 +54,67 @@
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                     <div class="mt-5 text-center">
                         <br/>
-                        <p>Hello</p> 
-                        <p>I am Paul Jason Cruz</p>
-                        <p>Web Developer</p>
-                        <p>Mobile Developer</p>
+                        <p class="popout">
+                            <span>H</span>
+                            <span>e</span>
+                            <span>l</span>
+                            <span>l</span>
+                            <span>o</span>
+                        </p> 
+                        <p class="popout">
+                            <span>Paul</span> <span>Jason</span> <span>Cruz</span>
+                        </p>
+                        <p class="popout">
+                            <span>Full</span> <span>Stack</span> <span>Developer</span>
+                        </p>
                         <br/>
-                        <p>Welcome to my Porfolio</p>
-                        <a onclick="setContactUsActive()" class="text-white" id="home-contact-us" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="true">Contact Me</a>
+                        <p class="popout">
+                            <span>Welcome</span>
+                            <span>to</span>
+                            <span>my</span>
+                            <span>Portfolio</span>
+                        </p>
+                        <a onclick="setContactUsActive()" class="text-white" id="home-contact-us" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="true">
+                            <p class="popout"> 
+                                <span>C</span>
+                                <span>o</span>
+                                <span>n</span>
+                                <span>t</span>
+                                <span>a</span>
+                                <span>c</span>
+                                <span>t</span>
+                                <span>M</span>
+                                <span>e</span>
+                            </p>
+                        </a>
                     </div>
                 </div>
 
                 <!-- ABOUT ME TAB -->
                 <div class="tab-pane fade" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
-                    <div class="container mt-5">
+                    <div class="container mt-5 about-content">
                         <h3><strong>About Me: </strong></h3>
                         <p>
-                            Hi, I am Paul Jason M. Cruz. <br/>
-                            Graduated BSIT from PUP Main Campus. <br/>
-                            Currently working as a fullstack web and mobile developer. <br/>
-                            Now a days, Web developer can be a mobile developer because of <br/>
+                            Hi, I am Paul Jason M. Cruz.
+                            Graduated BSIT from PUP Main Campus.
+                            Currently working as a fullstack web and mobile developer. 
+                            Now a days, Web developer can be a mobile developer because of 
                             single coded App where the javascript app can be converted to Android/iOS Apps.
                         </p>
                         <p>
                             In Web Development:<br/>
-                            For the Backend API (REST), I experienced using PHP (Laravel and Phalcon). <br/>
-                            Today I am using GoLang as an API and also familiar with NodeJS and learning to add <br/>
-                            with Socket.io for progressive web apps.<br/>
-                            For the Databases, MySQL is what I mainly use but I work also with NoSQL (Firebase and DynamoDB). <br/>
-                            For the JavaScript FrontEnd Frameworks, Currently I am using AngularJS and I updated my <br/>
-                            knowledge to write in TypeScript with Angular2+ and VueJS with Quasar Framework<br/>
+                            For the Backend API (REST), I experienced using PHP (Laravel and Phalcon). 
+                            Today I am using GoLang as an API and also familiarizing myself with NodeJS and 
+                            learning to add with Socket.io for progressive web apps.
+                            For the Databases, MySQL is what I mainly use but I work also with NoSQL (Firebase and DynamoDB). 
+                            For the JavaScript FrontEnd Frameworks, Currently I am using AngularJS and I updated my 
+                            knowledge to write in TypeScript with Angular2+ and VueJS with Quasar Framework
                         </p>
                         <p>
                             In Mobile Development:<br/>
-                            I am currently cross-platform mobile development like Xamarin and experienced once the Ionic 1. <br/>
-                            But on my free time, I familiarize myself with Flutter and Native Android. <br/>
-                            Experienced publising for both Play Store and Appstore. <br/>
+                            I am currently cross-platform mobile development like Xamarin and experienced once the Ionic. 
+                            But on my free time, I familiarize myself with Flutter and Native Android. 
+                            Experienced publising for both Play Store and Appstore. 
                         </p>
                         <p>
                             As for myself, I am a hard worker and a team player. 
@@ -121,6 +145,11 @@
         </div>
     </div>
 
+    <!-- VUEJS PORTFOLIO LINKER -->
+    <a class="popup-link" href="https://paulcruz03.github.io/VueJS-Portfolio/" target="_blank">
+        Click here to visit my VueJS Portfolio
+    </a>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="jquery.js"></script>
@@ -128,9 +157,9 @@
     <script src="bootstrap.js"></script>
 
     <script>
-        // window.onload = function(){
-        //     $(".loading-page").fadeOut('slow');
-        // }
+        $(document).ready(function(){
+            $(".loader").fadeOut('slow');
+        });
 
         function setContactUsActive(){
             document.getElementById('pills-home-tab').classList.remove('active');

@@ -46,8 +46,9 @@ body{
 }
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
-    display: none;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
 }
   
 /* Track */
@@ -86,8 +87,13 @@ body{
     transition: 500ms ease-out;
     cursor: pointer;
     color: white;
+    white-space: nowrap;
 }
-
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .popup-link{
+        width: 100%;
+    }
+}
 .popup-link:hover{
     background: #007bff;
     color: white;
@@ -107,4 +113,16 @@ body{
         text-align: justify;
     }
 
+}
+
+.img-responsive-div{
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.img-fluid-by-height{
+    max-height: 100%;
+    width: auto;
 }
